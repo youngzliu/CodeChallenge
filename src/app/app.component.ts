@@ -9,5 +9,5 @@ import { FurnitureService } from "./furniture.service"
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private furnitureService: FurnitureService) { }
 }
