@@ -34,8 +34,6 @@ _This website will allow users to view a furniture website, and apply various fi
 
 _This website was created using Node.js, Node.js package manager, and Angular._
 
-# EmailClient
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
