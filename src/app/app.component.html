@@ -14,7 +14,7 @@
       <th>Stock Left:</th>
       <th>Dimensions:</th>
     </tr>
-    <tr *ngFor="let furniture of furnitureList | filter">
+    <tr *ngFor="let furniture of furnitureList | filter:filterOption">
       <td>{{furniture.id}}</td>
       <td>{{furniture.name}}</td>
       <td><img src="{{furniture.imageUrl}}"></td>
@@ -29,7 +29,7 @@
   </table>
   <br>
   <h3>Filter options:</h3>
-  <select class="custom-select">
+  <select class="custom-select" (change)="onChange($event.target.value)">
     <option value="sortId" selected="selected">Sort by ID</option>
     <option value="sortPrice">Sort by Price</option>
     <option value="deliverable">Deliverable</option>

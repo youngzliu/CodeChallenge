@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   furnitureObs;
   furnitureList: Furniture[] = [];
   displayTable: boolean = false;
-
+  filterOption: string = "sortId";
 
   constructor(private furnitureService: FurnitureService) {
   }
@@ -39,5 +39,9 @@ export class AppComponent implements OnInit {
       }
       console.log(this.furnitureList);
     });
+  }
+
+  onChange(option) {
+    this.filterOption = option;
   }
 }
