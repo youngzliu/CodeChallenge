@@ -26,8 +26,8 @@ export class AppComponent implements OnInit {
   getFurniture() {
     this.furnitureService.getFurnitureData().subscribe(response => {
       this.furnitureObs = response.json();
+      this.displayTable = true;
       for (let furniture of this.furnitureObs.body.data) {
-        console.log(furniture)
         if (furniture.dimensions === undefined) {
           this.furnitureList.push(new Furniture(furniture.id, furniture.name, furniture.imageUrl, furniture.description, furniture.colors, furniture.type, furniture.deliverable, furniture.cost, furniture.stock));
         }
