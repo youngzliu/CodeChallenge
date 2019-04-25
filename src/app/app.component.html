@@ -12,8 +12,17 @@
       <th>Stock Left:</th>
       <th>Dimensions:</th>
     </tr>
-    <tr>
-
+    <tr *ngFor="let furniture of furnitureList">
+      <td>{{furniture.id}}</td>
+      <td>{{furniture.name}}</td>
+      <td><img src="{{furniture.imageUrl}}"></td>
+      <td>{{furniture.description}}</td>
+      <td>{{furniture.colors}}</td>
+      <td>{{furniture.type}}</td>
+      <td>{{furniture.getDeliverable()}}</td>
+      <td>${{furniture.cost}}</td>
+      <td>{{furniture.stock}}</td>
+      <td>{{furniture.getDimensions()}}</td>
     </tr>
   </table>
 </div>
