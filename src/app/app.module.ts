@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from "@angular/http"
+import { HttpModule } from "@angular/http";
+import { FilterPipe } from "./filter.pipe";
+
 
 
 import { AppComponent } from './app.component';
@@ -8,7 +10,8 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilterPipe
   ],
   imports: [
     HttpModule,

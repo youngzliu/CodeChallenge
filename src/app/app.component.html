@@ -1,3 +1,5 @@
+<h1>Welcome to our furniture store!</h1>
+
 <div *ngIf="displayTable">
   <table>
     <tr>
@@ -12,7 +14,7 @@
       <th>Stock Left:</th>
       <th>Dimensions:</th>
     </tr>
-    <tr *ngFor="let furniture of furnitureList">
+    <tr *ngFor="let furniture of furnitureList | filter">
       <td>{{furniture.id}}</td>
       <td>{{furniture.name}}</td>
       <td><img src="{{furniture.imageUrl}}"></td>
@@ -25,4 +27,17 @@
       <td>{{furniture.getDimensions()}}</td>
     </tr>
   </table>
+  <br>
+  <h3>Filter options:</h3>
+  <select class="custom-select">
+    <option value="sortId" selected="selected">Sort by ID</option>
+    <option value="sortPrice">Sort by Price</option>
+    <option value="deliverable">Deliverable</option>
+    <option value="stock">In Stock</option>
+    <option value="chair">Only Chairs</option>
+    <option value="table">Only Tables</option>
+    <option value="sofa">Only Sofas</option>
+    <option value="rug">Only Rugs</option>
+  </select>
+
 </div>

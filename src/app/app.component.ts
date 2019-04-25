@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   furnitureList: Furniture[] = [];
   displayTable: boolean = false;
 
+
   constructor(private furnitureService: FurnitureService) {
   }
 
